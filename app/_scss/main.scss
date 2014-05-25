@@ -1,0 +1,91 @@
+@import "reset";
+
+$orange: #db632d;
+$blue: #2c3e50;
+$red: #da3537;
+$grey: #d7dadb;
+$dark: #2a2c2b;
+$yellow: #dbd520;
+
+body, html{
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: $blue;
+  color: $grey;
+}
+
+h1{
+  font-size: 3em;
+  text-align: center;
+  margin: 1em 0;
+
+
+  a{
+    text-decoration: none;
+    color: $red;
+    border: none;
+  }
+}
+
+h2{
+  margin-bottom: 1em;
+}
+
+ol{
+  list-style: decimal;
+  margin-left: 2em;
+
+  li{
+    margin-bottom: 1em;
+
+    span{
+      color: $yellow;
+    }
+  }
+}
+
+a{
+    color: $red;
+    text-decoration: none;
+    border-bottom: 1px solid $red;
+}
+
+h2{
+  font-size: 2em;
+}
+
+.site{
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+.download-area div{
+  text-align: center;
+}
+
+.download-zip{
+  background-color: $red;
+  color: $grey;
+  line-height: 2em;
+  font-size: 2.6em;
+  padding: 0 0.4em;
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+.note{
+  padding-top: 0.5em;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.footer{
+  margin-top: 5em;
+  border-top: 1px solid $red;
+  padding-top: 1em;
+
+  a{
+    display: inline-block;
+    padding-top: 0.5em;
+  }
+}
