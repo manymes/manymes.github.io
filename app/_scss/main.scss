@@ -1,91 +1,155 @@
 @import "reset";
+@import "../_bower_components/bourbon/dist/bourbon";
+@import "../_bower_components/neat/app/assets/stylesheets/neat";
 
-$orange: #db632d;
-$blue: #2c3e50;
-$red: #da3537;
-$grey: #d7dadb;
-$dark: #2a2c2b;
-$yellow: #dbd520;
+$blue: #267ea1;
+$grey-dark: #384444;
+$grey: #879292;
+$grey-light: #ced5de;
 
 body, html{
   font-family: "Helvetica", "Arial", sans-serif;
-  background-color: $blue;
-  color: $grey;
+  background-color: $grey-light;
+  color: $grey-dark;
+  font-size: 18px;
+  font-family: 'Droid Serif', serif;
 }
 
-h1{
-  font-size: 3em;
-  text-align: center;
-  margin: 1em 0;
+.site{
+  @include outer-container;
 
+  aside{
+    @include span-columns(12);
+    padding: 2em;
+    text-align: center;
 
-  a{
-    text-decoration: none;
-    color: $red;
-    border: none;
+    nav{
+      display: none;
+    }
+  }
+
+  #home-content{
+    @include span-columns(12);
+    padding: 0 2em;
+    padding-bottom: 2em;
   }
 }
 
-h2{
-  margin-bottom: 1em;
+p{
+  line-height: 1.4em;
 }
 
 ol{
   list-style: decimal;
-  margin-left: 2em;
+  margin: 1em;
+  margin-left: 3em;
 
   li{
-    margin-bottom: 1em;
-
-    span{
-      color: $red;
-    }
+    margin: 1em 0;
   }
 }
 
-a{
-    color: $red;
-    text-decoration: none;
-    border-bottom: 1px solid $red;
+h1{
+  font-size: 2.5em;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
 }
 
 h2{
-  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: 'Lato', sans-serif;
 }
 
-.site{
-  margin: 2em auto;
-  max-width: 800px;
+a{
+    color: $blue;
+    text-decoration: none;
+    border-bottom: 1px solid $blue;
 }
 
-.download-area div{
-  text-align: center;
-}
+nav{
+  margin-top: 2em;
+  a{
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0.5em 0;
+  }
 
-.download-zip{
-  background-color: $red;
-  color: $grey;
-  line-height: 2em;
-  font-size: 2.6em;
-  padding: 0 0.4em;
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 0.2em;
+  .download a{
+    background-color: $blue;
+    font-size: 1.8em;
+    line-height: 2.5em;
+    padding: 0 0.5em;
+    color: $grey-light;
+    margin: 0;
+  }
 }
+  
+footer{
+  margin: 3em 0;
+  padding: 0 2em;
+  margin-bottom: 0em;
+  @include span-columns(12);
 
-.note{
-  padding-top: 0.5em;
-  font-size: 0.9em;
-  font-style: italic;
-}
-
-.footer{
-  margin-top: 5em;
-  border-top: 1px solid $red;
-  padding-top: 1em;
+  p{
+    text-align: center;
+    padding: 2em 0;
+    border-top: 1px solid $grey;
+    line-height: 1.4em;
+  }
 
   a{
-    display: inline-block;
-    padding-top: 0.5em;
+    text-decoration: none;
+    border-bottom: 1px solid $blue;
+  }
+}
+
+.mobile-only{
+  display: block;
+  padding-top: 2em;
+
+  div{
+    text-align: center;
+  }
+}
+
+
+
+@media all and (min-width: 955px) {
+
+  .mobile-only{
+    display: none;
+  }
+
+  .site{
+    @include outer-container;
+
+    aside{
+      @include span-columns(4);
+      padding: 1em;
+      padding-top: 7.5em;
+      text-align: left;
+
+      nav{
+        display: block;
+      }
+    }
+
+    #home-content{
+      @include span-columns(7);
+      padding-left: 3em;
+      padding-bottom: 0em;
+    }
+  }
+
+  footer{
+    margin: 6em 0;
+    margin-bottom: 0em;
+    @include span-columns(7);
+    @include shift(4);
   }
 }

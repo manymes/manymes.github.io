@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/img/favicon.ico" type="image/png" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 
         <!-- build:css({app,.tmp}) /css/main.css -->
         <!-- Custom CSS -->
@@ -14,22 +16,17 @@
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-          </div>
+        <section class="site">
 
           {{ content }}
 
-          <div class="footer">
-            <div class="contact">
+          <footer>
               <p>
                 MMP Joscha Probst und David Neubauer<br />
                 <a href="https://github.com/manymes">github.com/manymes</a>
               </p>
-            </div>
-          </div>
-        </div>
+          </footer>
+        </section>
 
     <!-- build:js(app) /js/scripts.js -->
     <script src="/js/main.js"></script>

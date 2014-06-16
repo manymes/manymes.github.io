@@ -1,6 +1,8 @@
 {
   "name": "website",
   "version": "0.0.0",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "neat": "~1.6.0"
   }
 }
